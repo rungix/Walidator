@@ -1,0 +1,25 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+
+  <link rel="stylesheet" href="dnssec.css" />
+  <script type="text/javascript" src="dnssec.js"></script>
+</head>
+
+<body>
+  <header>
+    <div id="icon">
+      <img src="astronaut.png" />
+    </div>
+    <div>
+      <p class="domain">{domain}</p>
+      <p id="status" class="insecure">No DANE-TLS signature</p>
+    </div>
+  </header>
+
+  <p id="status_description">Domain <b class="domain">{domain}</b> doesn't provide DANE-TLS signature,
+    can't start HTTP resources validation.</p>
+</body>
+
+</html>

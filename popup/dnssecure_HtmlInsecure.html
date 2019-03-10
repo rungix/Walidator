@@ -1,0 +1,29 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+
+  <link rel="stylesheet" href="dnssec.css" />
+</head>
+
+<body>
+  <header>
+    <div id="icon">
+      <img src="../button/HTTPTampering.png" />
+    </div>
+    <div>
+      <p class="domain">{domain}</p>
+      <b id="status" class="secure"> DNSSEC</b> + <b id="status" class="insecure">HTTP Insecure</b>
+    </div>
+  </header>
+
+  <p id="status_description">
+    Domain <b class="domain">{domain}</b> is properly secure through <b id="status" class="secure">DNSSEC</b>.<br>
+
+    Corrent HTTP clear-text connection is suffering from <b id="status" class="insecure">HTTP Tampering Attack</b>.
+  </p>
+
+  <script type="text/javascript" src="dnssec.js"></script>
+</body>
+
+</html>

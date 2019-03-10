@@ -1,0 +1,28 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+
+  <link rel="stylesheet" href="dnssec.css" />
+</head>
+
+<body>
+  <header>
+    <div id="icon">
+      <img src="../button/dnssec.png" />
+    </div>
+    <div>
+      <p class="domain">{domain}</p>
+      <p id="status" class="secure">secure by DANE-TLS</p>
+    </div>
+  </header>
+
+  <p id="status_description">Domain <b class="domain">{domain}</b> is secure through DANE-TLS.
+    
+  Corrent HTTP clear-text connection is susceptible to HTTP tampering attack.
+  </p>
+
+  <script type="text/javascript" src="dnssec.js"></script>
+</body>
+
+</html>

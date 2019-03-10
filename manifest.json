@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Walidator",
+  "version": "0.1.0",
+  "description": "DNSSEC-based WWW validator to protect against middle-box HTTP Tampering.",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
+  "icons": {
+    "48": "icons/planets-48.png",
+    "96": "icons/planets-96.png"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "webRequest",
+    "webRequestBlocking",
+    "webNavigation",
+    "storage",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["psl.min.js", "jsrsasign-all-min.js", "background.js"]
+  },
+  "page_action": {
+    "browser_style": true,
+    "default_title": "Walidator: protect against HTTP tampering",
+    "default_icon": "icons/astronaut.png",
+    "default_popup": "popup/dnsinsecure.html"
+  },
+  "options_ui": {
+    "page": "options.html"
+  }
+}
