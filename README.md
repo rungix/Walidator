@@ -81,3 +81,23 @@ assets/js/app.min.js?version=2
 
 
 
+## Nginx 
+[Nginx reverse proxy with code injection](https://blog.fhrnet.eu/2017/09/20/nginx-reverse-proxy-with-code-injection/)
+
+[Module ngx_http_addition_module](https://nginx.org/en/docs/http/ngx_http_addition_module.html)
+
+
+
+## Openresty
+lua-gumbo
+
+if is 'html', then cache it with *content*. After that, determine if the page is sent with ngx.arg[2]
+```
+if ngx.var.ishtml == "true" then 
+
+        local data, eof = ngx.arg[1], ngx.arg[2]
+        ngx.var.content = ngx.var.content .. data
+	if eof == true then
+		....
+```
+

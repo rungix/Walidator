@@ -92,9 +92,14 @@ function checkDNSSEC(details) {
                                     browser.tabs.executeScript({
                                       file: "base64x-1.1.js"
                                     });
-          */resolver4
+          */
             var xhrXML = new XMLHttpRequest();
             xhrXML.onreadystatechange = function () {
+              
+              if (this.readyState == 1) {
+                          xhrXML.setRequestHeader("Cache-Control", "max-stale");
+              }
+
               if (this.readyState == 4 && this.status == 200) {
                 console.log(xhrXML.response);
                 console.log(xhrXML.responseText);
@@ -158,7 +163,6 @@ function checkDNSSEC(details) {
             };
 
             xhrXML.overrideMimeType('text/html');
-
             xhrXML.open("GET", details.url, true);
             xhrXML.send();
             /*
